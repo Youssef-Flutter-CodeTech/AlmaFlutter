@@ -1,3 +1,4 @@
+import 'package:alma_app/features/Auth/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import '../routing/routes.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
@@ -7,6 +8,9 @@ class AppRouter {
     switch (settings.name) {
       case Routes.splashScreen:
         return _createRoute(const SplashScreen());
+
+      case Routes.loginScreen:
+        return _createRoute(const LoginScreen());
 
       default:
         return null;

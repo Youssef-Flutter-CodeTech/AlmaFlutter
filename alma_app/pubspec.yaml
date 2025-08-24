@@ -16,12 +16,12 @@ dependencies:
   intl:
   equatable:
   get_it:
+  connectivity_plus: 
   cached_network_image:
   flutter_screenutil:
   flutter_animate:
-  freezed_annotation:
-  json_annotation:
   flutter_native_splash:
+  firebase_crashlytics:
   animate_do:
   lottie:
   google_fonts:
@@ -30,13 +30,13 @@ dependencies:
   dartz:
   flutter_svg:
   cupertino_icons:
+  firebase_messaging: ^16.0.0
+  googleapis_auth: ^2.0.0
+  awesome_notifications: ^0.10.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner:
-  freezed:
-  json_serializable:
   bloc_test:
   mockito:
   flutter_lints:

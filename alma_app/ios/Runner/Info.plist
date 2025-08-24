@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Alma App</string>
+	<string>Ʌlma Travel</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -26,6 +26,13 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	 <key>NSLocalNetworkUsageDescription</key>
+    <string>Allow the debugger to connect over your local network.</string>
+    <key>NSBonjourServices</key>
+    <array>
+    <string>_dartVmService._tcp</string>
+    <string>_dartobservatory._tcp</string>
+    </array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>
