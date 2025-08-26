@@ -3,12 +3,6 @@
  "welcome": "مرحبًا",
  "login": "تسجيل الدخول",
  "signup": "إنشاء حساب",
- "language.preferences_title": "تفضيلات اللغة",
- "language.preferences_subtitle": "خصص تجربتك باختيار لغتك.",
- "language.english": "الإنجليزية",
- "language.arabic": "العربية",
- "language.english_native": "(English)",
- "language.arabic_native": "(العربية)",
  "auth": {
   "login_title": "تسجيل الدخول إلى ألما ترافل",
   "login_subtitle": "تجربتك الكاملة في السفر، مجمعة في منصة واحدة.",
@@ -31,6 +25,10 @@
   "reset_password": "إعادة تعيين كلمة المرور"
  },
  "language": {
+  "default":"(الافتراضي)",
+  "color":"اللون",
+  "languagetitle":"اللغة",
+  "next":"التالي",
   "preferences_title": "تفضيلات اللغة",
   "preferences_subtitle": "خصص تجربتك باختيار لغتك.",
   "english": "الإنجليزية",

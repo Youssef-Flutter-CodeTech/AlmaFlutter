@@ -1,4 +1,7 @@
 // app_theme.dart
+import 'package:alma_app/core/constants/app_constants.dart';
+import 'package:alma_app/core/cubit/color/color_cubit.dart';
+import 'package:alma_app/core/services/locale_service.dart';
 import 'package:alma_app/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
@@ -19,11 +22,11 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
-      primaryColor: AppColor.primary,
+      primaryColor: appColor,
       scaffoldBackgroundColor: AppColor.bgWhite,
       fontFamily: 'Nunito',
       colorScheme: ColorScheme.light(
-        primary: AppColor.primary,
+        primary: appColor,
         secondary: AppColor.secondary,
         onPrimary: Colors.white,
         onSecondary: Colors.white,
@@ -79,13 +82,13 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(ResponsiveHelper.radius(8)),
-          borderSide: BorderSide(color: AppColor.primary, width: 2),
+          borderSide: BorderSide(color: appColor, width: 2),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: AppColor.primary,
+          backgroundColor: appColor,
           textStyle: TextStyle(
             fontSize: ResponsiveHelper.fontSize(16, tabletSize: 20),
             fontWeight: FontWeight.bold,
@@ -99,7 +102,7 @@ class AppTheme {
       ),
       iconTheme: const IconThemeData(color: AppColor.primaryText),
       buttonTheme: ButtonThemeData(
-        colorScheme: ColorScheme.light(primary: AppColor.primary),
+        colorScheme: ColorScheme.light(primary: appColor),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(ResponsiveHelper.radius(8)),
         ),
@@ -111,11 +114,11 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
-      primaryColor: AppColor.primary,
+      primaryColor: appColor,
       scaffoldBackgroundColor: AppColor.veryDark,
       fontFamily: 'Nunito',
       colorScheme: ColorScheme.dark(
-        primary: AppColor.primary,
+        primary: appColor,
         secondary: AppColor.secondary,
         surface: AppColor.veryDark,
         onSurface: Colors.grey[300]!,
@@ -177,13 +180,13 @@ class AppTheme {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(ResponsiveHelper.radius(8)),
-          borderSide: BorderSide(color: AppColor.primary, width: 2),
+          borderSide: BorderSide(color: appColor, width: 2),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: AppColor.primary,
+          backgroundColor: appColor,
           textStyle: TextStyle(
             fontSize: ResponsiveHelper.fontSize(16, tabletSize: 20),
             fontWeight: FontWeight.bold,

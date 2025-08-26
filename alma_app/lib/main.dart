@@ -1,3 +1,4 @@
+import 'package:alma_app/core/cubit/color/color_cubit.dart';
 import 'package:alma_app/core/services/locale_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,6 +22,7 @@ void main() async {
       providers: [
         BlocProvider(create: (_) => LocaleCubit()),
         BlocProvider(create: (_) => ThemeCubit()),
+        BlocProvider(create: (_) => PrimaryColorCubit()),
       ],
       child: MyApp(appRouter: AppRouter()),
     ),

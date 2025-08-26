@@ -31,6 +31,8 @@
   "reset_password": "RESET PASSWORD"
  },
  "language": {
+  "languagetitle":"Language",  
+  "next":"Next",
   "preferences_title": "Language Preferences",
   "preferences_subtitle": "Customize your experience with your language.",
   "english": "English",
@@ -39,6 +41,8 @@
   "arabic_native": "(العربية)"
  },
  "appearance": {
+    "default":"(default)",
+  "color":"Color",
   "title": "Appearance",
   "theme_setup": "Theme Setup",
   "color_default": "Color (Default)",

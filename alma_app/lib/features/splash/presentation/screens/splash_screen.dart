@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       // After splash go to language selection first
-      NavigationService.pushNamed(Routes.languagePreferences);
+      NavigationService.pushNamed(Routes.languagePreferences, arguments: false);
     });
   }
 

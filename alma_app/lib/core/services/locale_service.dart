@@ -1,4 +1,5 @@
 import 'package:alma_app/app_bloc_observer.dart';
+import 'package:alma_app/core/cubit/color/color_cubit.dart';
 import 'package:alma_app/core/cubit/locale/locale_cubit.dart';
 import 'package:alma_app/core/cubit/theme/theme_cubit.dart';
 import 'package:alma_app/core/network/network_info.dart';
@@ -28,5 +29,6 @@ Future<void> getItinit() async {
   sl.registerLazySingleton<CashHelper>(() => cashHelper);
   sl.registerLazySingleton(() => ThemeCubit());
   sl.registerLazySingleton(() => LocaleCubit());
+  sl.registerFactory<PrimaryColorCubit>(() => PrimaryColorCubit());
   sl.registerFactory<LoginCubit>(() => LoginCubit());
 }

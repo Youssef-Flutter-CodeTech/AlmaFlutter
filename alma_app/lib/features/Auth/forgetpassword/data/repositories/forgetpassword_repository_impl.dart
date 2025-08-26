@@ -5,6 +5,4 @@ class ForgetpasswordRepositoryImpl implements ForgetpasswordRepository {
   final ForgetpasswordRemoteDataSource remoteDataSource;
 
   ForgetpasswordRepositoryImpl(this.remoteDataSource);
-
-  // TODO: Implement repository logic
 }

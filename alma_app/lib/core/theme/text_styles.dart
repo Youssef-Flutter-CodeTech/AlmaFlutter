@@ -1,19 +1,47 @@
+import 'package:alma_app/core/theme/app_font_weights.dart';
 import 'package:alma_app/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
 
 class TextStyles {
   static TextStyle? get text28Bold => TextStyle(
       fontSize: ResponsiveHelper.fontSize(28),
-      fontWeight: FontWeight.bold,
+      fontWeight: AppFontWeights.bold,
       fontFamily: 'IBMPlexSans');
 
-  static TextStyle? get text16BoldRegular => TextStyle(
+  static TextStyle? get text16Regular => TextStyle(
       fontSize: ResponsiveHelper.fontSize(16),
-      fontWeight: FontWeight.normal,
+      fontWeight: AppFontWeights.regular,
       fontFamily: 'IBMPlexSans');
-
-  static TextStyle? get text12BoldRegular => TextStyle(
+  static TextStyle? get text16Medium => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.medium,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text16Bold => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.bold,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text16ExtraBold => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.extraBold,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text16SemiBold => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.semiBold,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text14Regular => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.regular,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text14Bold => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.bold,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text14SemiBold => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(16),
+      fontWeight: AppFontWeights.semiBold,
+      fontFamily: 'IBMPlexSans');
+  static TextStyle? get text12Regular => TextStyle(
       fontSize: ResponsiveHelper.fontSize(12),
-      fontWeight: FontWeight.normal,
+      fontWeight: AppFontWeights.regular,
       fontFamily: 'IBMPlexSans');
 }

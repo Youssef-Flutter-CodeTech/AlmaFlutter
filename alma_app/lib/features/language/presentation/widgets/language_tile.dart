@@ -1,4 +1,4 @@
-import 'package:alma_app/core/theme/app_colors.dart';
+import 'package:alma_app/core/constants/app_constants.dart';
 import 'package:alma_app/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -36,7 +36,7 @@ class LanguageTile extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: selected ? AppColor.primary : Colors.grey.withOpacity(0.3),
+            color: selected ? appColor : Colors.grey.withOpacity(0.3),
             width: selected ? 2 : 1,
           ),
         ),
@@ -50,37 +50,37 @@ class LanguageTile extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyles.text16BoldRegular?.copyWith(
+                    style: TextStyles.text16Regular?.copyWith(
                       color: titleColor,
                     ),
                   ),
                   const SizedBox(height: 2),
-                  Text(
-                    subtitle,
-                    style: TextStyles.text12BoldRegular?.copyWith(
-                      color: subtitleColor,
-                    ),
-                  ),
                 ],
+              ),
+            ),
+            Text(
+              subtitle,
+              style: TextStyles.text12Regular?.copyWith(
+                color: subtitleColor,
               ),
             ),
             const SizedBox(width: 12),
             // Custom radio with check mark when selected
             Container(
-              width: 22,
-              height: 22,
+              width: 24,
+              height: 24,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: selected ? AppColor.primary : Colors.grey,
+                  color: selected ? appColor : Colors.grey,
                   width: 2,
                 ),
-                color: selected ? AppColor.primary : Colors.transparent,
+                color: selected ? appColor : Colors.transparent,
               ),
               child: selected
                   ? const Icon(
                       Icons.check,
-                      size: 14,
+                      size: 20,
                       color: Colors.white,
                     )
                   : null,

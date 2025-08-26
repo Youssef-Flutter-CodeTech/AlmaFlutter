@@ -1,3 +1,1 @@
-class ForgetpasswordEntity {
-  // TODO: Define entity fields
-}
+class ForgetpasswordEntity {}

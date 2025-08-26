@@ -5,25 +5,22 @@ import 'package:alma_app/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
-import '../widgets/language_tile.dart';
-import '../../../../core/cubit/locale/locale_cubit.dart';
 import '../../../../core/routing/routes.dart';
+import '../widgets/language_section.dart';
 
 class LanguagePreferencesPage extends StatelessWidget {
-  const LanguagePreferencesPage({super.key});
+  final bool shownextButton;
+  const LanguagePreferencesPage({super.key, this.shownextButton = true});
 
-  // Helper function to select color based on theme mode
-  Color checkColor({
-    required BuildContext context,
-    required Color lightColor,
-    required Color darkColor,
-  }) {
-    final ThemeMode themeMode = context.watch<ThemeCubit>().state;
-    final Brightness platformBrightness =
-        MediaQuery.of(context).platformBrightness;
-    return themeMode == ThemeMode.system
-        ? (platformBrightness == Brightness.dark ? darkColor : lightColor)
-        : (themeMode == ThemeMode.dark ? darkColor : lightColor);
+  Color checkColor(
+      {required BuildContext context,
+      required Color lightColor,
+      required Color darkColor}) {
+    final ThemeMode mode = context.watch<ThemeCubit>().state;
+    final isDark = mode == ThemeMode.system
+        ? MediaQuery.of(context).platformBrightness == Brightness.dark
+        : mode == ThemeMode.dark;
+    return isDark ? darkColor : lightColor;
   }
 
   @override
@@ -36,6 +33,16 @@ class LanguagePreferencesPage extends StatelessWidget {
       ),
       appBar: AppBar(
         elevation: 0,
+        centerTitle: false,
+        title: Text(
+          "language.languagetitle".tr(),
+          style: TextStyles.text16Bold?.copyWith(
+              color: checkColor(
+            context: context,
+            lightColor: AppColor.primaryText,
+            darkColor: AppColor.bgWhite,
+          )),
+        ),
         surfaceTintColor: Colors.transparent,
         backgroundColor: checkColor(
           context: context,
@@ -48,146 +55,83 @@ class LanguagePreferencesPage extends StatelessWidget {
           darkColor: Colors.white,
         ),
       ),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'language.preferences_title'.tr(),
-                style: TextStyles.text28Bold?.copyWith(
-                  color: checkColor(
-                    context: context,
-                    lightColor: AppColor.veryDark,
-                    darkColor: AppColor.whiteInputBg,
-                  ),
-                ),
-              ),
-              verticalSpace(8),
-              Text(
-                'language.preferences_subtitle'.tr(),
-                style: TextStyles.text16BoldRegular?.copyWith(
-                  color: checkColor(
-                    context: context,
-                    lightColor: AppColor.veryDark,
-                    darkColor: AppColor.whiteInputBg,
-                  ),
-                ),
-              ),
-              verticalSpace(20),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: checkColor(
-                        context: context,
-                        lightColor: AppColor.bgWhite,
-                        darkColor: AppColor.veryDark,
-                      ),
-                      borderRadius: BorderRadius.circular(12),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.02),
-                          blurRadius: 8,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      children: [
-                        // Language Selection Section
-                        BlocBuilder<LocaleCubit, LocaleState>(
-                          builder: (context, state) {
-                            return _buildLanguageSection(context, state);
-                          },
-                        ),
-                        const SizedBox(height: 20),
-                        // Next Button
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushReplacementNamed(Routes.loginScreen);
-                            },
-                            child: Text('Next'.tr()),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLanguageSection(BuildContext context, LocaleState localeState) {
-    final Locale currentLocale = localeState.locale;
-
-    Widget buildLanguageTile({
-      required String title,
-      required String subtitle,
-      required String flagEmoji,
-      required Locale locale,
-    }) {
-      final bool isSelected = currentLocale.languageCode == locale.languageCode;
-      return LanguageTile(
-        title: title,
-        subtitle: subtitle,
-        flagAsset: flagEmoji,
-        selected: isSelected,
-        onTap: () => context.read<LocaleCubit>().changeLocale(locale),
-        backgroundColor: checkColor(
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        color: checkColor(
           context: context,
-          lightColor: AppColor.bgWhite,
+          lightColor: AppColor.whiteInputBg,
           darkColor: AppColor.veryDark,
         ),
-        titleColor: checkColor(
-          context: context,
-          lightColor: AppColor.veryDark,
-          darkColor: Colors.white,
-        ),
-        subtitleColor: checkColor(
-          context: context,
-          lightColor: AppColor.veryDark,
-          darkColor: Colors.grey[400]!,
-        ),
-      );
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Language'.tr(),
-          style: TextStyles.text16BoldRegular?.copyWith(
-            color: checkColor(
-              context: context,
-              lightColor: AppColor.veryDark,
-              darkColor: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'language.preferences_title'.tr(),
+              style: TextStyles.text16ExtraBold?.copyWith(
+                color: checkColor(
+                  context: context,
+                  lightColor: AppColor.primaryText,
+                  darkColor: AppColor.whiteInputBg,
+                ),
+              ),
             ),
-          ),
+            verticalSpace(8),
+            Text(
+              'language.preferences_subtitle'.tr(),
+              style: TextStyles.text14Regular?.copyWith(
+                color: checkColor(
+                  context: context,
+                  lightColor: AppColor.bodyText,
+                  darkColor: AppColor.whiteInputBg,
+                ),
+              ),
+            ),
+            verticalSpace(20),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: checkColor(
+                      context: context,
+                      lightColor: AppColor.bgWhite,
+                      darkColor: AppColor.veryDark,
+                    ),
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.02),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+                  child: Column(
+                    children: [
+                      LanguageSection(),
+                      verticalSpace(20),
+                      shownextButton
+                          ? SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushNamed(Routes.appearance);
+                                },
+                                child: Text('language.next'.tr()),
+                              ),
+                            )
+                          : SizedBox(),
+                      verticalSpace(12),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-        const SizedBox(height: 12),
-        buildLanguageTile(
-          title: 'language.english'.tr(),
-          subtitle: 'language.english_native'.tr(),
-          flagEmoji: 'assets/images/englishflag.svg',
-          locale: const Locale('en'),
-        ),
-        buildLanguageTile(
-          title: 'language.arabic'.tr(),
-          subtitle: 'language.arabic_native'.tr(),
-          flagEmoji: 'assets/images/arabicflag.svg',
-          locale: const Locale('ar'),
-        ),
-      ],
+      ),
     );
   }
 }
