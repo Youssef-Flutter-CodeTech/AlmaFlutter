@@ -1,4 +1,4 @@
-import 'package:alma_app/core/utils/navigation_service.dart';
+import 'package:alma_app/core/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../../core/routing/routes.dart';
@@ -15,8 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 10), () {
-      NavigationService.pushNamed(Routes.loginScreen);
+    Timer(const Duration(seconds: 3), () {
+      // After splash go to language selection first
+      NavigationService.pushNamed(Routes.languagePreferences);
     });
   }
 

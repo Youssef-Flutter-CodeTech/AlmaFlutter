@@ -2,5 +2,49 @@
  "appName": "تطبيقي",
  "welcome": "مرحبًا",
  "login": "تسجيل الدخول",
- "signup": "إنشاء حساب"
+ "signup": "إنشاء حساب",
+ "language.preferences_title": "تفضيلات اللغة",
+ "language.preferences_subtitle": "خصص تجربتك باختيار لغتك.",
+ "language.english": "الإنجليزية",
+ "language.arabic": "العربية",
+ "language.english_native": "(English)",
+ "language.arabic_native": "(العربية)",
+ "auth": {
+  "login_title": "تسجيل الدخول إلى ألما ترافل",
+  "login_subtitle": "تجربتك الكاملة في السفر، مجمعة في منصة واحدة.",
+  "work_email": "البريد الوظيفي",
+  "password": "كلمة المرور",
+  "invalid_email": "بريد غير صحيح. حاول مرة أخرى",
+  "required": "هذا الحقل مطلوب",
+  "login_cta": "تسجيل الدخول",
+  "login_with_sso": "تسجيل الدخول عبر SSO",
+  "forgot_password_q": "هل نسيت كلمة المرور؟",
+  "send": "إرسال",
+  "verify_code": "تحقق من الرمز",
+  "otp_title": "التحقق عبر OTP",
+  "otp_subtitle": "أدخل الرمز المكوّن من 6 أرقام المرسل إلى بريدك الإلكتروني",
+  "resend": "إعادة الإرسال الآن",
+  "reset_title": "سنساعدك على إعادة التعيين.",
+  "reset_subtitle": "لا تقلق! أدخل بريدك الإلكتروني المسجل وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
+  "new_password": "كلمة المرور الجديدة",
+  "confirm_password": "تأكيد كلمة المرور",
+  "reset_password": "إعادة تعيين كلمة المرور"
+ },
+ "language": {
+  "preferences_title": "تفضيلات اللغة",
+  "preferences_subtitle": "خصص تجربتك باختيار لغتك.",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "english_native": "(English)",
+  "arabic_native": "(العربية)"
+ },
+ "appearance": {
+  "title": "المظهر",
+  "theme_setup": "إعدادات السمة",
+  "color_default": "اللون (الافتراضي)",
+  "mode": "الوضع",
+  "light": "فاتح",
+  "dark": "داكن",
+  "system": "النظام"
+ }
 }

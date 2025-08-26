@@ -44,8 +44,16 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  
+ 
+      
   assets:
     - assets/images/
     - assets/icons/
     - assets/lottie/
     - assets/lang/
+  
+fonts:
+     - family: IBMPlexSans
+       fonts:
+          - asset: assets/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf

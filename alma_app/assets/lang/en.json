@@ -2,5 +2,49 @@
  "appName": "My App",
  "welcome": "Welcome",
  "login": "Login",
- "signup": "Sign Up"
+ "signup": "Sign Up",
+ "language.preferences_title": "Language Preferences",
+ "language.preferences_subtitle": "Customize your experience with your language.",
+ "language.english": "English",
+ "language.arabic": "Arabic",
+ "language.english_native": "(English)",
+ "language.arabic_native": "(العربية)",
+ "auth": {
+  "login_title": "Login to Alma Travel",
+  "login_subtitle": "Your entire travel experience, streamlined into a single platform.",
+  "work_email": "Work email",
+  "password": "Password",
+  "invalid_email": "Incorrect email. Please try again",
+  "required": "This field is required",
+  "login_cta": "LOGIN",
+  "login_with_sso": "LOGIN WITH SSO",
+  "forgot_password_q": "Forgot password?",
+  "send": "SEND",
+  "verify_code": "VERIFY CODE",
+  "otp_title": "OTP Verification",
+  "otp_subtitle": "Enter the 6-digit code sent to your registered email",
+  "resend": "Resend Now",
+  "reset_title": "We'll help you reset it.",
+  "reset_subtitle": "No worries! Enter your registered email address and we'll send you a link to reset your password.",
+  "new_password": "New Password",
+  "confirm_password": "Confirm Password",
+  "reset_password": "RESET PASSWORD"
+ },
+ "language": {
+  "preferences_title": "Language Preferences",
+  "preferences_subtitle": "Customize your experience with your language.",
+  "english": "English",
+  "arabic": "Arabic",
+  "english_native": "(English)",
+  "arabic_native": "(العربية)"
+ },
+ "appearance": {
+  "title": "Appearance",
+  "theme_setup": "Theme Setup",
+  "color_default": "Color (Default)",
+  "mode": "Mode",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System"
+ }
 }

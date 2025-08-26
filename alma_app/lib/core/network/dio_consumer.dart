@@ -6,7 +6,7 @@ import 'package:alma_app/core/network/logger.dart';
 import 'package:alma_app/core/network/network_info.dart';
 import 'package:alma_app/core/services/locale_service.dart';
 import 'package:alma_app/core/utils/cash_helper.dart';
-import 'package:alma_app/core/utils/navigation_service.dart';
+import 'package:alma_app/core/services/navigation_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';

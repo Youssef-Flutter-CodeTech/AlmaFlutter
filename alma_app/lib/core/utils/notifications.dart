@@ -283,7 +283,6 @@ class NotificationService {
           payload: payload != null ? toStringMap(payload) : null,
         ),
       );
-      debugPrint('Big picture notification shown: $title');
     } catch (e) {
       debugPrint('Error showing big picture notification: $e');
     }
@@ -348,7 +347,6 @@ class NotificationService {
     }
   }
 
-  /// Convert Map<String, dynamic> to Map<String, String?>?
   static Map<String, String?>? toStringMap(Map<String, dynamic>? input) {
     if (input == null) {
       debugPrint('Input map is null, returning null');
@@ -367,7 +365,6 @@ class NotificationService {
     }
   }
 
-  /// Convert Map<String, String?>? to Map<String, dynamic>
   static Map<String, String> toDynamicMap(Map<String, String?>? input) {
     if (input == null) {
       debugPrint('Input map is null, returning empty dynamic map');

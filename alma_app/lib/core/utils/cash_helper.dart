@@ -36,6 +36,16 @@ class CashHelper {
     return _prefs.get(key);
   }
 
+  bool? getbool(String key) {
+    // Retrieve data from SharedPreferences
+    return _prefs.getBool(key);
+  }
+
+  String? getString(String key) {
+    // Retrieve data from SharedPreferences
+    return _prefs.getString(key);
+  }
+
   Future<void> remove(String key) async {
     // Remove data from SharedPreferences
     await _prefs.remove(key);
