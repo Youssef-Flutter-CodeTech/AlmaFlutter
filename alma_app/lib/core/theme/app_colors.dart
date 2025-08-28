@@ -27,4 +27,5 @@ class AppColor {
   static const Color darkBlue = Color(0xFF012169); // #012169 - Deep blue
   static const Color veryDark = Color(0xFF030514); // #030514 - Nearly black
   static const Color red = Color(0xFFFF0000); // #FF0000 - Bright red
+  static const Color error = Color(0xFFE33939); // #FF0000 - Bright red
 }

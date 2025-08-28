@@ -30,9 +30,12 @@ dependencies:
   dartz:
   flutter_svg:
   cupertino_icons:
-  firebase_messaging: ^16.0.0
-  googleapis_auth: ^2.0.0
-  awesome_notifications: ^0.10.1
+  firebase_messaging: 
+  googleapis_auth: 
+  awesome_notifications: 
+  get:
+  pinput: 
+  smart_auth: ^3.2.0
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +55,7 @@ flutter:
     - assets/icons/
     - assets/lottie/
     - assets/lang/
+    - assets/images/Logo.svg
   
 fonts:
      - family: IBMPlexSans

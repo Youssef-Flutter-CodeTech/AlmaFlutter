@@ -4,6 +4,4 @@ class ForgetpasswordUseCase {
   final ForgetpasswordRepository repository;
 
   ForgetpasswordUseCase(this.repository);
-
-  // TODO: Implement call logic
 }

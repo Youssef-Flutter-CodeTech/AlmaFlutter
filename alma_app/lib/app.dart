@@ -2,7 +2,9 @@ import 'package:alma_app/core/cubit/color/color_cubit.dart';
 import 'package:alma_app/core/cubit/locale/locale_cubit.dart';
 import 'package:alma_app/core/services/theme_service.dart';
 import 'package:alma_app/core/services/navigation_service.dart';
-import 'package:alma_app/features/language/presentation/pages/language_preferences_page.dart';
+import 'package:alma_app/features/Auth/setnewpassword/presentation/widgets/set_new_password_form.dart';
+import 'package:alma_app/features/Auth/setnewpassword/set_new_password.dart';
+import 'package:alma_app/features/splash/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
             buildWhen: (previous, current) => previous != current,
             builder: (context, state) {
               return BlocBuilder<ThemeCubit, ThemeMode>(
-                buildWhen: (previous, current) => previous != current,
+                //  buildWhen: (previous, current) => previous != current,
                 builder: (context, state) {
                   return MaterialApp(
                     navigatorKey: NavigationService.navigatorKey,
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
                     supportedLocales: context.supportedLocales,
                     localizationsDelegates: context.localizationDelegates,
                     onGenerateRoute: appRouter.generateRoute,
-                    home: LanguagePreferencesPage(),
+                    home: SplashScreen(),
                     initialRoute: '/',
                   );
                 },

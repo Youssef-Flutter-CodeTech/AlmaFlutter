@@ -43,14 +43,16 @@ class ResponsiveHelper {
 
 bool isTablet(BuildContext context) =>
     ResponsiveHelper.isTabletWithContext(context);
-
 Color checkColor(
-        {required BuildContext context,
-        required Color lightColor,
-        required Color darkColor}) =>
-    context.read<ThemeCubit>().themeMode != ThemeMode.dark
-        ? lightColor
-        : darkColor;
+    {required BuildContext context,
+    required Color lightColor,
+    required Color darkColor}) {
+  final ThemeMode mode = context.watch<ThemeCubit>().state;
+  final isDark = mode == ThemeMode.system
+      ? MediaQuery.of(context).platformBrightness == Brightness.dark
+      : mode == ThemeMode.dark;
+  return isDark ? darkColor : lightColor;
+}
 
 double rSize(double mobile, {double? tablet}) =>
     ResponsiveHelper.fontSize(mobile, tabletSize: tablet);

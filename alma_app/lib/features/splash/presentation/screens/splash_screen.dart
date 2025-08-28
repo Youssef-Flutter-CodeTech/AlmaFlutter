@@ -1,6 +1,7 @@
 import 'package:alma_app/core/services/navigation_service.dart';
+import 'package:alma_app/core/utils/background_img.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/routing/routes.dart';
 import 'dart:async';
 
@@ -24,23 +25,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          SvgPicture.asset(
-            "assets/images/splashscreen.svg",
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
+      body: backgroundImg(
+        img: "assets/images/splashscreen.svg",
+        items: Positioned(
+          top: 233,
+          left: 0,
+          right: 0,
+          child: Image.asset(
+            width: 213.w,
+            height: 86.h,
+            "assets/images/alma.png",
           ),
-          Positioned(
-            top: 233,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              "assets/images/logo.png",
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

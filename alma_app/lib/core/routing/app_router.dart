@@ -5,6 +5,8 @@ import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../features/language/presentation/pages/language_preferences_page.dart';
 import '../../features/Auth/forgetpassword/presentation/pages/forgetpassword_page.dart';
 import '../../features/Auth/verifyotp/presentation/pages/verifyotp_page.dart';
+import '../../features/Auth/setnewpassword/set_new_password.dart';
+import '../../features/home/presentation/pages/home_page.dart';
 import '../../features/settings/appearance/presentation/pages/appearance_page.dart';
 
 class AppRouter {
@@ -20,7 +22,21 @@ class AppRouter {
         return _createRoute(const ForgetpasswordPage());
 
       case Routes.verifyOtpScreen:
-        return _createRoute(const VerifyotpPage());
+        final args = settings.arguments as Map<String, String>;
+        return _createRoute(VerifyotpPage(
+          email: args['email'] ?? '',
+          source: args['source'] ?? 'login',
+        ));
+
+      case Routes.setNewPasswordScreen:
+        final args = settings.arguments as Map<String, String>?;
+        return _createRoute(SetNewPasswordPage(
+          otp: args?['otp'],
+          email: args?['email'],
+        ));
+
+      case Routes.homeScreen:
+        return _createRoute(const HomePage());
 
       case Routes.languagePreferences:
         return _createRoute(const LanguagePreferencesPage());

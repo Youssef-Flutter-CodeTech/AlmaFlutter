@@ -20,26 +20,27 @@ class TextStyles {
       fontSize: ResponsiveHelper.fontSize(16),
       fontWeight: AppFontWeights.bold,
       fontFamily: 'IBMPlexSans');
-  static TextStyle? get text16ExtraBold => TextStyle(
-      fontSize: ResponsiveHelper.fontSize(16),
-      fontWeight: AppFontWeights.extraBold,
-      fontFamily: 'IBMPlexSans');
   static TextStyle? get text16SemiBold => TextStyle(
       fontSize: ResponsiveHelper.fontSize(16),
       fontWeight: AppFontWeights.semiBold,
       fontFamily: 'IBMPlexSans');
   static TextStyle? get text14Regular => TextStyle(
-      fontSize: ResponsiveHelper.fontSize(16),
+      fontSize: ResponsiveHelper.fontSize(14),
       fontWeight: AppFontWeights.regular,
       fontFamily: 'IBMPlexSans');
   static TextStyle? get text14Bold => TextStyle(
-      fontSize: ResponsiveHelper.fontSize(16),
+      fontSize: ResponsiveHelper.fontSize(14),
       fontWeight: AppFontWeights.bold,
       fontFamily: 'IBMPlexSans');
+  static TextStyle? get text14Medium => TextStyle(
+      fontSize: ResponsiveHelper.fontSize(14),
+      fontWeight: AppFontWeights.medium,
+      fontFamily: 'IBMPlexSans');
   static TextStyle? get text14SemiBold => TextStyle(
-      fontSize: ResponsiveHelper.fontSize(16),
+      fontSize: ResponsiveHelper.fontSize(14),
       fontWeight: AppFontWeights.semiBold,
       fontFamily: 'IBMPlexSans');
+
   static TextStyle? get text12Regular => TextStyle(
       fontSize: ResponsiveHelper.fontSize(12),
       fontWeight: AppFontWeights.regular,

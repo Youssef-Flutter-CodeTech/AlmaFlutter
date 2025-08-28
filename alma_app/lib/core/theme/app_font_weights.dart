@@ -8,24 +8,18 @@ class AppFontWeights {
   /// Font weight for extra-light text (200).
   static const FontWeight extraLight = FontWeight.w200;
 
-  /// Font weight for regular text (300).
-  static const FontWeight regular = FontWeight.w300;
+  /// Font weight for Light text (300).
+  static const FontWeight light = FontWeight.w300;
 
-  /// Font weight for medium text (400).
-  static const FontWeight medium = FontWeight.w400;
+  /// Font weight for regular text (400).
+  static const FontWeight regular = FontWeight.w400;
 
-  /// Font weight for semi-bold text (500).
-  static const FontWeight semiBold = FontWeight.w500;
+  /// Font weight for medium text (500).
+  static const FontWeight medium = FontWeight.w500;
 
-  /// Font weight for bold text (600).
-  static const FontWeight bold = FontWeight.w600;
+  /// Font weight for semi-bold text (600).
+  static const FontWeight semiBold = FontWeight.w600;
 
-  /// Font weight for extra-bold text (700).
-  static const FontWeight extraBold = FontWeight.w700;
-
-  /// Font weight for black text (800).
-  static const FontWeight black = FontWeight.w800;
-
-  /// Font weight for extra-black text (900).
-  static const FontWeight extraBlack = FontWeight.w900;
+  /// Font weight for bold text (700).
+  static const FontWeight bold = FontWeight.w700;
 }

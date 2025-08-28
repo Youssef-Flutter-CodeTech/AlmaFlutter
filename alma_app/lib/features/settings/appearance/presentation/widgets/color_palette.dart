@@ -43,7 +43,7 @@ class ColorPalette extends StatelessWidget {
                 color: checkColor(
                   context: context,
                   lightColor: AppColor.bodyText,
-                  darkColor: AppColor.bodyText,
+                  darkColor: AppColor.whiteInputBg,
                 ),
               ),
             ),

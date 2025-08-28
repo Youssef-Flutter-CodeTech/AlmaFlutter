@@ -14,8 +14,9 @@ class AppearancePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: theme.scaffoldBackgroundColor,
       appBar: AppBar(
         backgroundColor: checkColor(
           context: context,
@@ -50,7 +51,7 @@ class AppearancePage extends StatelessWidget {
                         context: context,
                         lightColor: AppColor.primaryText,
                         darkColor: AppColor.inputLabel))),
-            const SizedBox(height: 12),
+            verticalSpace(12),
             Card(
               elevation: 3,
               color: checkColor(
@@ -65,7 +66,7 @@ class AppearancePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ColorPalette(),
-                    SizedBox(height: 16),
+                    verticalSpace(16),
                     ModeSelector(),
                     verticalSpace(20),
                     shownextButton

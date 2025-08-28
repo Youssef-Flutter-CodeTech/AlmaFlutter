@@ -1,7 +1,5 @@
 // app_theme.dart
 import 'package:alma_app/core/constants/app_constants.dart';
-import 'package:alma_app/core/cubit/color/color_cubit.dart';
-import 'package:alma_app/core/services/locale_service.dart';
 import 'package:alma_app/core/utils/responsive_helper.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
@@ -24,7 +22,7 @@ class AppTheme {
       brightness: Brightness.light,
       primaryColor: appColor,
       scaffoldBackgroundColor: AppColor.bgWhite,
-      fontFamily: 'Nunito',
+      fontFamily: 'IBMPlexSans',
       colorScheme: ColorScheme.light(
         primary: appColor,
         secondary: AppColor.secondary,
@@ -116,7 +114,7 @@ class AppTheme {
       brightness: Brightness.dark,
       primaryColor: appColor,
       scaffoldBackgroundColor: AppColor.veryDark,
-      fontFamily: 'Nunito',
+      fontFamily: 'IBMPlexSans',
       colorScheme: ColorScheme.dark(
         primary: appColor,
         secondary: AppColor.secondary,
